@@ -1,0 +1,146 @@
+.navbar-container {
+    border: 1px solid #ff2b85;
+    background-color: #ff2b85;
+    display: flex;
+    justify-content: space-between;
+    padding: 6px;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.logopanda {
+    color: #ffffff;
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    margin-left: 10px;
+}
+
+.logopartner {
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    color: #ff2b85;
+    padding: 5px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.navbarBtn {
+    display: flex;
+}
+
+.linkBtn {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 14px;
+    letter-spacing: 2px;
+}
+
+.linkBtn:hover {
+    color: #bbbbbb;
+    letter-spacing: 1px;
+}
+
+.profileBtn {
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 6;
+    cursor: pointer;
+}
+
+.profileDropDown {
+    position: absolute;
+    top: 100%;
+    right: 2;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    padding: 8px;
+    display: none;
+    min-width: 100px;
+    padding: 10px;
+}
+
+.profileBtn:hover .profileDropDown {
+    display: block;
+}
+
+.iconBtn {
+    color: #ffffff;
+    font-size: 26px;
+}
+
+.adminBtn {
+    border: none;
+    background-color: #ff2b85;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    margin-right: 23px;
+}
+
+.adminBtn:hover {
+    color: #dddddd;
+}
+
+.dropLink {
+    color: #ff2b85;
+    font-size: 17px;
+    padding: 10px;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.dropLink:hover {
+    color: #a20245;
+
+}
+
+
+
+@media (max-width: 600px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .logopanda {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .logopartner {
+        font-size: 14px;
+        padding: 4px 8px;
+        margin-bottom: 12px;
+    }
+
+    .navbarBtn {
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .linkBtn {
+        font-size: 16px;
+        padding: 10px 8px;
+    }
+
+    .profileBtn {
+        gap: 4px;
+        padding: 6px 0;
+    }
+
+    .iconBtn {
+        font-size: 22px;
+    }
+
+    .adminBtn {
+        font-size: 16px;
+        padding: 6px 12px;
+        margin-right: 0;
+    }
+}

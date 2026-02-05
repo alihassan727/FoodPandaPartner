@@ -1,0 +1,105 @@
+.item_box {
+    border: 1px solid rgb(212, 212, 212);
+    width: 240px;
+    height: auto;
+    background-color: #7b81b35c;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.img_frame {
+    width: 240px;
+    height: 160px;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.itemImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item_content {
+    border: 1px solid #f2f2f9;
+    height: auto;
+    padding-bottom: 10px;
+    background-color: #f2f2f9;
+    border-radius: 20px;
+}
+
+.itemTitle {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 22px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.itemPrice {
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #ff2b85;
+    margin-top: -18px;
+    margin-bottom: -10px;
+    margin-left: 10px;
+}
+
+.actBtnEdit {
+    padding: 10px;
+    width: 70px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: #7b81b3;
+    color: white;
+    margin-left: 120px;
+    cursor: pointer;
+}
+
+
+.actBtnDel {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #b37b7b;
+    color: white;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.itemBoxWrapper {
+    display: contents;
+
+}
+
+.noItem {
+    font-size: 30px;
+    font-family:sans-serif;
+    font-weight: bolder;
+}
+
+
+@media (max-width: 480px) {
+    .mainBox {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .nav2 {
+        height: 60px;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .nav2 h1 {
+        font-size: 18px;
+    }
+
+    .addBtn {
+        width: 130px;
+        height: 40px;
+        font-size: 14px;
+    }
+}

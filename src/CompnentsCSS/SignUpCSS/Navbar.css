@@ -1,0 +1,54 @@
+.navContainer {
+    border: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+.pandaText {
+    color: #ff2b85;
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+}
+
+.partnerText {
+    border: 1px solid #ff2b85;
+    background-color: #ff2b85;
+    color: white;
+    padding: 5px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.loginBtnNav {
+    cursor: pointer;
+    background-color: #ff2b85;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+
+
+@media(max-width: 600px) {
+    .navContainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .loginBtn {
+        align-self: stretch;
+        margin-bottom: 10px;
+    }
+}
