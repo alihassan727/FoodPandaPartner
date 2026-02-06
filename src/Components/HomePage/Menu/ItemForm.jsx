@@ -32,7 +32,7 @@ function ItemForm({ editData, refreshList }) {
         const token = localStorage.getItem('token');
         const method = editData ? 'PUT' : 'POST';
         const url = editData
-            ? `https://foodpandabackend-production.up.railway.app/itemdata${editData._id}`
+            ? `https://foodpandabackend-production.up.railway.app/itemdata/${editData._id}`
             : 'https://foodpandabackend-production.up.railway.app/itemdata'
 
         const options = {
