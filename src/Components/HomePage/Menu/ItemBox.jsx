@@ -12,7 +12,7 @@ function ItemBox() {
     const loadItemData = async () => {
         try {
             const token = localStorage.getItem("token")
-            const res = await fetch("http://localhost:5000/itemdata", {
+            const res = await fetch("https://foodpandabackend-production.up.railway.app/itemdata", {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -39,7 +39,8 @@ function ItemBox() {
         if (!confirmDelete) return;
         try {
             const token = localStorage.getItem("token")
-            const res = await fetch(`http://localhost:5000/itemdata/${item._id}`, {
+
+            const res = await fetch(`https://foodpandabackend-production.up.railway.app/itemdata/${item._id}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`

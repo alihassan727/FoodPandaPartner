@@ -3,7 +3,7 @@ import '../../../CompnentsCSS/HomePage/Menu/ItemForm.css'
 import InputField from '../../SignUp/InputField'
 import { useForm } from 'react-hook-form';
 
-function ItemForm({ editData,refreshList }) {
+function ItemForm({ editData, refreshList }) {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const [previewImg, setPreviewImg] = useState(null)
     const [loading, setLoading] = useState(false)
@@ -32,8 +32,8 @@ function ItemForm({ editData,refreshList }) {
         const token = localStorage.getItem('token');
         const method = editData ? 'PUT' : 'POST';
         const url = editData
-            ? `http://localhost:5000/itemdata/${editData._id}`
-            : 'http://localhost:5000/itemdata'
+            ? `https://foodpandabackend-production.up.railway.app/${editData._id}`
+            : 'https://foodpandabackend-production.up.railway.app/itemdata'
 
         const options = {
             method: method,
