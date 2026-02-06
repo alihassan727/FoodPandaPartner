@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import InputField from './InputField'
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import { Link } from "react-router-dom";
 
 function RegistrationForm() {
     const [errorMsg, setErrorMsg] = useState("");
@@ -142,7 +143,9 @@ function RegistrationForm() {
                         className='registerBtn'>Register Button</button>
 
                 </form>
-                <p style={{ fontFamily: "sans-serif", fontSize: "14px", fontWeight: 'lighter', marginBottom: '-20px' }}>Already have a account? <a href="/login" style={{ color: '#e21b70' }}>Login</a></p>
+                <p style={{ fontFamily: "sans-serif", fontSize: "14px", fontWeight: 'lighter', marginBottom: '-20px' }}>Already have a account? <Link to="/login" style={{ color: '#e21b70' }}>
+                    Login
+                </Link></p>
                 <p style={{ fontSize: '11px', fontFamily: 'system-ui', marginBottom: '-20px', color: 'gray' }}>This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" style={{ color: '#e21b70' }}>Privacy Policy </a> </p>
                 <p style={{ fontSize: '11px', fontFamily: 'system-ui', marginBottom: '20px', color: 'gray' }}>and <a href="https://policies.google.com/terms" style={{ color: '#e21b70' }}>Terms of Service</a> apply.</p>
             </div>

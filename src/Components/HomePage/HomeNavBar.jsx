@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import '../../CompnentsCSS/HomePage/HomeNavBar.css'
 import { FaUserCircle } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
 
 function HomeNavBar() {
     const [userProfile, setUserProfile] = useState('')
@@ -25,7 +27,7 @@ function HomeNavBar() {
                 <p className='logopanda'>panda <span className='logopartner'>partner</span></p>
                 <div className='navbarBtn'>
                     <a className='linkBtn' href="/home/order">Orders</a>
-                    <a className='linkBtn' href="/home/menu">Menu</a>
+                    <Link className='linkBtn' to="/home/menu">Menu</Link>
                     <a className='linkBtn' href="/home/resturant">Resturant</a>
                     <a className='linkBtn' href="/home/customer">Customers</a>
                 </div>
@@ -36,7 +38,14 @@ function HomeNavBar() {
                     <button className='adminBtn' >Hello, {userProfile.name} ▾</button>
                     <div className='profileDropDown'>
                         <a href="/home/profile" className='dropLink'>View Profile <br /></a>
-                        <a href="/login" className='dropLink'>Logout</a>
+                        <Link
+                            to="/login"
+                            className="dropLink"
+                            onClick={() => localStorage.removeItem("token")}
+                        >
+                            Logout
+                        </Link>
+
                     </div>
                 </div>
             </nav>

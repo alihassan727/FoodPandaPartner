@@ -3,6 +3,8 @@ import '../../CompnentsCSS/LoginCSS/Login.css'
 import { useForm } from "react-hook-form"
 import { useNavigate } from 'react-router-dom';
 import { useState } from "react"
+import { Link } from "react-router-dom";
+
 function Login() {
     //STATES
     const [errorMsg, setErrorMsg] = useState("")
@@ -67,7 +69,8 @@ function Login() {
                 <p style={{ fontSize: '11px', fontFamily: 'system-ui', color: 'gray', marginBottom: '-20px' }}>By continuing you acknowledge that your personal data will be processed </p>
                 <p style={{ fontSize: '11px', fontFamily: 'system-ui', color: 'gray' }}>in accordance with the  <a href="https://www.foodpanda.com/vendor-privacy-policy/" style={{ color: '#e21b70' }}>Privacy Statement.</a></p>
 
-                <p style={{ fontFamily: "system-ui", marginTop: '-10px' }}>No account? <a href="/signup" style={{ color: '#e21b70' }}>Partner with Foodpanda</a></p>
+                <p style={{ fontFamily: "system-ui", marginTop: '-10px' }}>No account? <Link to="/signup" style={{ color: '#e21b70' }}>
+                    Partner with Foodpanda</Link></p>
             </div>
         </div>
     )
