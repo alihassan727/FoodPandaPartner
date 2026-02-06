@@ -32,7 +32,7 @@ function ItemForm({ editData, refreshList }) {
         const token = localStorage.getItem('token');
         const method = editData ? 'PUT' : 'POST';
         const url = editData
-            ? `https://foodpandabackend-production.up.railway.app/${editData._id}`
+            ? `https://foodpandabackend-production.up.railway.app/itemdata${editData._id}`
             : 'https://foodpandabackend-production.up.railway.app/itemdata'
 
         const options = {
@@ -44,6 +44,12 @@ function ItemForm({ editData, refreshList }) {
         }
         try {
             const res = await fetch(url, options)
+            if (!res.ok) {
+                const text = await res.text();
+                console.error("Server error:", text);
+                alert("Item add failed");
+                return;
+            }
             const data = await res.json()
 
             if (data.success) {
