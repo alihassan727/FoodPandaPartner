@@ -1,11 +1,14 @@
 import '../../CompnentsCSS/SignUpCSS/Navbar.css'
+import { Link } from "react-router-dom";
 
 function Navbar() {
     return (
         <div>
             <nav className='navContainer'>
                 <p className='pandaText'>panda <span className='partnerText'>partner</span></p>
-                <button className='loginBtnNav'><a href="/login" style={{ color: 'white', textDecoration: 'none' }}>Login</a></button>
+                <button className='loginBtnNav'>
+                    <Link to="/login" style={{ color: 'white', textDecoration: 'none' }} >Login</Link>
+                </button>
             </nav>
         </div>
     )

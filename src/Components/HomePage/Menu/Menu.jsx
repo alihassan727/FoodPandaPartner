@@ -9,7 +9,6 @@ function Menu() {
     return (
         <div>
             <div className='nav2'>
-
                 <h1 style={{ fontFamily: 'sans-serif', fontWeight: 'lighter' }}>Menu Items</h1>
                 <button
                     onClick={() => showForm === false ? setShowForm(true) : setShowForm(false)}

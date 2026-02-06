@@ -26,10 +26,10 @@ function HomeNavBar() {
             <nav className='navbar-container'>
                 <p className='logopanda'>panda <span className='logopartner'>partner</span></p>
                 <div className='navbarBtn'>
-                    <a className='linkBtn' href="/home/order">Orders</a>
+                    <Link className='linkBtn' to="/home/order" >Order</Link>
                     <Link className='linkBtn' to="/home/menu">Menu</Link>
-                    <a className='linkBtn' href="/home/resturant">Resturant</a>
-                    <a className='linkBtn' href="/home/customer">Customers</a>
+                    <Link className='linkBtn' to="/home/resturant">Resturant</Link>
+                    <Link className='linkBtn' to="/home/customer">Customer</Link>
                 </div>
                 <div className='profileBtn'>
                     <span className='iconBtn'>
@@ -37,7 +37,7 @@ function HomeNavBar() {
                     </span>
                     <button className='adminBtn' >Hello, {userProfile.name} ▾</button>
                     <div className='profileDropDown'>
-                        <a href="/home/profile" className='dropLink'>View Profile <br /></a>
+                        <Link to='/home/profile' className='dropLink'>View Profile <br /></Link>
                         <Link
                             to="/login"
                             className="dropLink"
