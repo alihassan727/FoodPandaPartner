@@ -33,12 +33,13 @@ function Login() {
                 navigate('/home')
             }
         } catch (error) {
-            setSuccessMsg(data.message);
-            setErrorMsg("");
+            setErrorMsg("Server error. Please try again later.");
+            setSuccessMsg("");
+            console.log(error);
         }
         reset()
     }
- 
+
     return (
         <div className="loginContainer">
             <p className='pandaText'>panda <span className='partnerText'>partner</span></p>

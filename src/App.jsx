@@ -19,7 +19,6 @@ function App() {
           <Route path='/' element={<Navigate to="/login" replace />} />
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<SignUp />} />
-          <Route />
           <Route path='/home' element={<Layout />}>
             <Route index element={<HomePage />} />
             <Route path='order' element={<Order />} />
