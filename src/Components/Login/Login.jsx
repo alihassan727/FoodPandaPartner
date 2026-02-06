@@ -20,8 +20,8 @@ function Login() {
             body: JSON.stringify(loginInfo)
         }
         try {
-            const BASE_URL = "https://foodpandabackend-production.up.railway.app/login";
-            const res = await fetch(BASE_URL, options)
+            const BASE_URL = "https://foodpandabackend-production.up.railway.app";
+            const res = await fetch(`${BASE_URL}/login`, options)
             const data = await res.json()
             if (!data.success) {
                 setErrorMsg(data.message);

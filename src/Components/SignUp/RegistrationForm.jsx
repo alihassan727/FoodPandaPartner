@@ -20,8 +20,8 @@ function RegistrationForm() {
             body: JSON.stringify(signupInfo)
         }
         try {
-            const BASE_URL = "https://foodpandabackend-production.up.railway.app/signup";
-            const res = await fetch(BASE_URL, options)
+            const BASE_URL = "https://foodpandabackend-production.up.railway.app";
+            const res = await fetch(`${BASE_URL}/signup`, options)
             const data = await res.json()
             if (!data.success) {
                 setErrorMsg(data.message);

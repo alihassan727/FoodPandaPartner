@@ -8,8 +8,8 @@ function HomeNavBar() {
     useEffect(() => {
         const loadUserProfle = async () => {
             const token = localStorage.getItem("token")
-            const BASE_URL = "https://foodpandabackend-production.up.railway.app/profile";
-            const res = await fetch(BASE_URL, {
+            const BASE_URL = "https://foodpandabackend-production.up.railway.app";
+            const res = await fetch(`${BASE_URL}/profile`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
