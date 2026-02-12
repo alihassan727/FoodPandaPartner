@@ -12,13 +12,23 @@ function ItemBox() {
     const loadItemData = async () => {
         try {
             const token = localStorage.getItem("token")
+            if (!token) return;
+
             const res = await fetch("https://foodpandabackend-production.up.railway.app/itemdata", {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
             })
             const data = await res.json()
-            setUserItemData(data.items)
+            if (data.success) {
+                setUserItemData(data.items)
+            } else {
+                if (res.status === 401) {
+                    localStorage.removeItem("token"); 
+                    window.location.href = "/login";  
+                }
+                console.log("Error:", data.message)
+            }
         } catch (error) {
             console.log("Item Get error", error)
         } finally {
